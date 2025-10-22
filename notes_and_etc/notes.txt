@@ -5,19 +5,27 @@
 the command "django-admin startproject config ." created the "config" folder. am I ok to change it to the project name? 
 I think so. why config? Did the codestar project have "config" folder? or the example source code?
 
-user story workflow not set up rpoperly, see https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_KC+3/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/
+user story workflow not set up rpoperly, see 
+https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_KC+3/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/
 
 Not sure which "templates" folder to put the HTMLs in, will put them in the wrong place for now, fix this later. 
 Although, will Django insist on finding these HTMLs in specific templates folders? I will find out. And deal with it if it happens.
 
-I don't know what I'm supposed to do with the readme yet!
+I don't know what I'm supposed to do with the readme yet! ✔~
 
-I should read the capstone criteria again
+I should read the capstone criteria again ✔~
 
 I should organize my code inst notes on onedrive so I know what I've got ✔
 
 write a list of all the lesson page titles for easy skimming and finding ✔
 
 next: 
-- read capstone criteria
-- make sure what I'm supposed to do with the readme
+- read capstone criteria ✔
+- make sure what I'm supposed to do with the readme ✔
+- look through my LMS skimming document and think/reflect/etc X
+
+I want to get an overall structure again and work down from there, using my notes, LMS skimming and making brief notes. 
+!!!- See LO 1.3, I should document stuff (?), use an 
+"agile model", user stories linked to project goals.
+
+found a pdf that tells me everything I need to do, it seems. The next thing on there is adding a new app. I also need to write agile plans, etc...
