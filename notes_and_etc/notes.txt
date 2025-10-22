@@ -29,3 +29,7 @@ I want to get an overall structure again and work down from there, using my note
 "agile model", user stories linked to project goals.
 
 found a pdf that tells me everything I need to do, it seems. The next thing on there is adding a new app. I also need to write agile plans, etc...
+
+TOMORROW:
+with pen and paper, do diagrams and writing explaining how django works. how urls and other things move between the various files in the project 
+boggles me. trace one url request, and what that causes to happen, referencing the simple broad diagram as well as the files and etc.
