@@ -1,0 +1,2 @@
+the command "django-admin startproject config ." created the "config" folder. am I ok to change it to the project name? 
+I think so. why config? Did the codestar project have "config" folder? or the example source code?
