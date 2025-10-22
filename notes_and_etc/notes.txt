@@ -14,6 +14,10 @@ I don't know what I'm supposed to do with the readme yet!
 
 I should read the capstone criteria again
 
-I should organize my code inst notes on onedrive so I know what I've got
+I should organize my code inst notes on onedrive so I know what I've got ✔
 
 write a list of all the lesson page titles for easy skimming and finding ✔
+
+next: 
+- read capstone criteria
+- make sure what I'm supposed to do with the readme
