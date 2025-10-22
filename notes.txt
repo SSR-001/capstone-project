@@ -1,4 +1,0 @@
-the command "django-admin startproject config ." created the "config" folder. am I ok to change it to the project name? 
-I think so. why config? Did the codestar project have "config" folder? or the example source code?
-
-user story workflow not set up rpoperly, see https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_KC+3/courseware/713441aba05441dfb3a7cf04f3268b3f/824fccecd0fe4e44871eeabcbf69d830/

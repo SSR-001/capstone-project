@@ -1,0 +1,38 @@
+This project is a blog. 
+Main page is a list of full blog posts, not paginated.
+Users can write and submit blog posts for approval, including images (could-have). Will the assessor need to see their submitted and unapproved posts, or should I auto-approve everything?
+All images are could-have.
+Administrator can create, change, delete blog post.
+Administrator can approve submitted blog posts.
+
+That is it. Very simple.
+
+So...
+
+
+~~~
+
+I need to figure out how to do that main page.
+
+I need to figure out the admin creating and deleting posts.
+
+~~~
+
+The main page:
+
+the most basic html possible
+
+code (js?) to create each post(?)
+
+THAT IS IT!!
+
+~~~
+
+main page html:
+
+header placeholder text
+main placeholder text
+footer placeholder text
+
+
+~~~
