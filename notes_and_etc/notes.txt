@@ -1,3 +1,7 @@
+22/10/25:
+
+(should I date and/or date and time these notes?)
+
 the command "django-admin startproject config ." created the "config" folder. am I ok to change it to the project name? 
 I think so. why config? Did the codestar project have "config" folder? or the example source code?
 
@@ -5,3 +9,11 @@ user story workflow not set up rpoperly, see https://learn.codeinstitute.net/cou
 
 Not sure which "templates" folder to put the HTMLs in, will put them in the wrong place for now, fix this later. 
 Although, will Django insist on finding these HTMLs in specific templates folders? I will find out. And deal with it if it happens.
+
+I don't know what I'm supposed to do with the readme yet!
+
+I should read the capstone criteria again
+
+I should organize my code inst notes on onedrive so I know what I've got
+
+write a list of all the lesson page titles for easy skimming and finding ✔
