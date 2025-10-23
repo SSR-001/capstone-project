@@ -36,3 +36,6 @@ footer placeholder text
 
 
 ~~~
+
+model:
+title/, article_body/, writer/, date written/, approved/, slug/, updated on/, blurb/, order/
