@@ -16,7 +16,7 @@ class ArticleModel (models.Model):
     approved = models.IntegerField(choices=STATUS, default = 0)
     blurb = models.TextField(blank=True)
     when_updated = models.DateTimeField(auto_now=True)
-    # order = models.IntegerField()
+    # articles_order = models.IntegerField()
     # class Meta:
     #     ordering = ???
     

@@ -39,3 +39,12 @@ footer placeholder text
 
 model:
 title/, article_body/, writer/, date written/, approved/, slug/, updated on/, blurb/, order/
+
+~~
+
+a page (or part of a page due to extending base.html, etc) that displays articles(aka posts):
+
+in Codestar, in blog.views.py, there is a class that runs a django function that returns a list of posts. then the index.html template loops through 
+it and  basically displays attributes of each item in the list.
+
+do i need to mess with statics for this to work?

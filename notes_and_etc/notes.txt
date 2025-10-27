@@ -32,4 +32,56 @@ found a pdf that tells me everything I need to do, it seems. The next thing on t
 
 TOMORROW:
 with pen and paper, do diagrams and writing explaining how django works. how urls and other things move between the various files in the project 
-boggles me. trace one url request, and what that causes to happen, referencing the simple broad diagram as well as the files and etc.
+boggles me. trace one url request, and what that causes to happen, referencing the simple broad diagram as well as the files and etc.  ✔
+
+23-10-25:
+
+I think my plan now is to just quickly go through all the LMS content today, to understand it better. It's quick work. I got up to here: ✔(what was relevant)
+https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_KC+3/courseware/713441aba05441dfb3a7cf04f3268b3f/6b4a4f493cbd46ecb6f6a841c98f0c82/
+
+One other thing I can do right now is inch forward on the html for the "article display". X
+
+24/10:
+
+after watching all the viedos, write here what should be in the project so far, where I am on the whole project, where I need to go, and what is the next step.
+
+there should be:
+
+URL routing
+basic table for a post
+superuser
+basic html, base and post display
+
+
+what is in the project:
+
+config:
+settings.py
+urls.py:
+    takes "" goes to my_website URLS, "admin/" goes to inbuilt admin, summernote/" goes to im not sure, can find out later if needed
+
+my_website:
+admin.py
+models.py
+urls.py:
+    takes "", gives homepageview function from local views.py
+views.py:
+    has homepageview function and the start of article view function. find the class view for that as its easier?
+templates folder
+
+static:
+wont look at this now.
+
+templates:
+(move this? the video mentioned it should be somewhere else. does it matter?) can experiment if the code cant find this html. not sure howit looks 
+for those yet.
+
+
+where I need to go:
+- make sure the post list display works (can be very ugly at this stage, I don't care)
+- allow users to create accounts and log in
+- create a drafts page ("your drafts") which can write their own drafts and also see theirs that are awaiting approval
+- users' articles can be updated by them
+
+what is the next step:
+WRITE ABOUT where I am with the two htmls for article view, think more then plan more.
