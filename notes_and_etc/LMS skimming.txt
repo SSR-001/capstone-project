@@ -22,7 +22,7 @@ deplying to heroku:
 I THINK THEREFORE I BLOG:
 Getting set up:
     userstories in github projects
-    create the project and blog app   <<<   come back to this, likely the next step
+    create the project and blog app   
     deploy to heroku
 
 Models part 1:

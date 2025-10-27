@@ -6,10 +6,10 @@ from django.db import models
 
 # SOME HERE TO DO LATER:
 STATUS = ((0, "Draft"), (1, "Published"))
-class ArticleModel (models.Model):
+class Article (models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    # writer = models.ForeignKey(OtherModel, on_delete=models.CASCADE, related_name="other-app_other-model-items")
+    # writer = models.ForeignKey(User, on_delete=models.CASCADE)
     article_body = models.TextField()
     date_written = models.DateTimeField(auto_now_add=True)
     # image = CloudinaryField('image', default='placeholder') #is this right?

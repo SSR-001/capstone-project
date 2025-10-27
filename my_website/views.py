@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import ArticleModel  #do I need this?
+from .models import Article  #do I need this?
 from django.views import generic
 
 # Create your views here.
@@ -8,5 +8,6 @@ from django.views import generic
 #     return HttpResponse("Hello, World!")
 
 class ArticleList(generic.ListView):
-    queryset = ArticleModel.objects.filter(approved=1)
-    
+    queryset = Article.objects.filter(approved=1) #was Article.objects.filter(approved=1)
+    template_name = "my_website/article_list.html"
+    # paginate_by = 6
