@@ -4,8 +4,12 @@
 
 {% comment %} copy of article_list page. {% endcomment %}
 
-<!-- index.html content starts here -->
+<!-- my_submissions.html content starts here -->
 <div class="container-fluid">
+    <!-- my attempt at section for writing or editing an article: -->
+    <div class="row">
+        {% comment %} I NEED CRISPY FORMS BEFORE I CONTINUE {% endcomment %}
+    <!-- end of my attempt at section for writing or editing an article -->
     <div class="row">
 
         <!-- Blog Entries Column -->
@@ -26,7 +30,7 @@
                             </a>
                             {{ article.article_body}}
                             <hr />
-                            <p class="card-text text-muted h6">{{ article.date_written}}
+                            <p class="card-text text-muted h6">{{ article.date_written }}
                             </p>
                         </div>
                     </div>

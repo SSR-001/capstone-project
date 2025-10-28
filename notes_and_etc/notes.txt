@@ -98,3 +98,5 @@ so... each article will go to "my submissions". new binary in table, "draft/requ
 
  NOW: I need to look at the stuff on static files, understand it, and do it, so that I can use styling to put my article create button and form on the right of mysubmissions.
  son't forget each awaiting approval article needs an edit button.
+
+ CURRENTLY I am messing with crispy forms, following the LMS, working in forms.py in my_website. The user article creation will need that.

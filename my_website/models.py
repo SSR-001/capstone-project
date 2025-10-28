@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 # SOME HERE TO DO LATER:
 STATUS = ((0, "Draft"), (1, "Published"))
+REQUESTAPPROVAL = ((0, "Not Ready For Approval"), (1, "Ready For Approval"))
 class Article (models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
@@ -14,6 +15,7 @@ class Article (models.Model):
     article_body = models.TextField()
     date_written = models.DateTimeField(auto_now_add=True)
     # image = CloudinaryField('image', default='placeholder') #is this right?
+    ready_for_approval = models.IntegerField(choices=REQUESTAPPROVAL, default = 0)
     approved = models.IntegerField(choices=STATUS, default = 0)
     blurb = models.TextField(blank=True)
     when_updated = models.DateTimeField(auto_now=True)
