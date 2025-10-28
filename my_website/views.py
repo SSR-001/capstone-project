@@ -8,6 +8,10 @@ from django.views import generic
 #     return HttpResponse("Hello, World!")
 
 class ArticleList(generic.ListView):
-    queryset = Article.objects.filter(approved=1) #was Article.objects.filter(approved=1)
+    queryset = Article.objects.filter(approved=1)
     template_name = "my_website/article_list.html"
     # paginate_by = 6
+
+class MySubmissions(generic.ListView):
+    queryset = Article.objects.filter(approved=0)
+    template_name = "my_website/my_submissions.html"

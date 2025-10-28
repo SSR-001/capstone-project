@@ -85,3 +85,16 @@ where I need to go:
 
 what is the next step:
 WRITE ABOUT where I am with the two htmls for article view, think more then plan more.
+
+27 oct:
+tomorrow: write about how I'm going to do either comments or articles. Decide which is best, then
+plan how to do that.
+
+28 oct:
+do articles, with a separate page to see your submissions/drafts/articles
+
+so... each article will go to "my submissions". new binary in table, "draft/request approval". In my submissions, each article there has a button allowing edit. Probably do
+ a sidebar to edit it.
+
+ NOW: I need to look at the stuff on static files, understand it, and do it, so that I can use styling to put my article create button and form on the right of mysubmissions.
+ son't forget each awaiting approval article needs an edit button.

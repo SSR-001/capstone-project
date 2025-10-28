@@ -1,5 +1,6 @@
 from django.db import models
 # from other-app.models import OtherModel
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -9,7 +10,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 class Article (models.Model):
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
-    # writer = models.ForeignKey(User, on_delete=models.CASCADE)
+    writer = models.ForeignKey(User, on_delete=models.CASCADE)
     article_body = models.TextField()
     date_written = models.DateTimeField(auto_now_add=True)
     # image = CloudinaryField('image', default='placeholder') #is this right?

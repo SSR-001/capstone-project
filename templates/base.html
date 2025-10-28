@@ -3,12 +3,14 @@
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url%}
+{% comment %} this not complete {% endcomment %}
+{% comment %} my_submissions_url = 0  {% endcomment %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
 <head>
-    <title>CodeStar Blog</title>
+    <title>scott's blog (change title)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Fonts CSS -->
@@ -47,6 +49,10 @@
                         <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" 
                         href="{% url 'account_logout' %}">Logout</a>
                     </li>
+                    <li class="nav-item">
+                        {% comment %} re below, I need to create a my_submissions_url {% endcomment %}
+                        <a class="nav-link {% comment %} {% if request.path == my_submissions_url %}active{% endif %} {% endcomment %}" aria-current="page"
+                        {% comment %}href="{% url 'my_submissions_url' %}"{% endcomment %}>My Submissions</a>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" 
