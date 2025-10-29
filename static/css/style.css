@@ -1,7 +1,9 @@
 /* from LMS: */
 
 body {
-    background-color: #F9FAFC;
+    /* background-color: #F9FAFC; */
+        background-color: lightblue
+
 }
 
 .brand {
@@ -28,7 +30,7 @@ body {
 }
 
 .main-bg {
-    background-color: #F9FAFC;
+    /* background-color: #F9FAFC; */
 }
 
 .card {
