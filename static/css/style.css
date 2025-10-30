@@ -2,8 +2,9 @@
 
 body {
     /* background-color: #F9FAFC; */
-        background-color: lightblue
-
+    background-color: black;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
 }
 
 .brand {
@@ -162,4 +163,10 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }

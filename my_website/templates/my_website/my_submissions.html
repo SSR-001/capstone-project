@@ -3,36 +3,42 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% comment %} copy of article_list page. {% endcomment %}
-
-<!-- my_submissions.html content starts here -->
-<div class="container-fluid">
-    <!-- my attempt at section for writing or editing an article: -->
-    <div class="row">
-        {% comment %} I NEED CRISPY FORMS BEFORE I CONTINUE {% endcomment %}
-        {% comment %} {% if user.is_autheticated %} {% endcomment %}
-        Write a new article here below. If you want to edit an article that's 
-        not approved, press its "Edit" button.
-        <form id="commentForm" method="post">
-        {{ article_form | crispy }}
-        {% csrf_token %}
-        <button id="submitButton" type="submit" 
-        class="btn btn-signup btn-lg">Submit</button>
-        </form>
+{# Create article form - appears once at top of page #}
+{% if user.is_authenticated %}
+<div class="container mb-4 mt-3">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Create a new article</h5>
+            <form method="post" action="{% url 'article_create' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="id_title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="id_title" name="title" placeholder="Article title" required>
+                </div>
+                <div class="mb-3">
+                    <label for="id_article_body" class="form-label">Article body</label>
+                    <textarea class="form-control" id="id_article_body" name="article_body" rows="6" placeholder="Write your article here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Create article</button>
+            </form>
+        </div>
     </div>
-        {% comment %} {% endif %} {% endcomment %}
+</div>
+{% else %}
+<p class="text-center text-muted mt-3">You must be logged in to submit articles.</p>
+{% endif %}
 
-    <!-- end of my attempt at section for writing or editing an article -->
+<!-- Article list section -->
+<div class="container-fluid">
     <div class="row">
-
         <!-- Blog Entries Column -->
-        <div class="col-12 mt-3 left">
-            <div class="row">
+        <div class="col-12 mt-3">
+            <div class="row justify-content-center">
                 {% for article in article_list %}
                 {% if article.writer == user %}
-                <div class="col-md-4">
+                <div class="col-12 col-md-8 col-lg-6">
                     <div class="card mb-4">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <div class="image-container">
                                 <div class="image-flash">
                                     <p class="author">Writer: {{ article.writer }}</p>
@@ -45,14 +51,15 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ article.date_written }}
                             </p>
+                            <a href="{% url 'article_edit' article.pk %}"
+                            class="btn btn-sm btn-outline-primary btn-edit"
+                            data-id="{{ article.id }}">
+                            Edit
+                            </a>
+                            <button class="btn btn-delete" data-id="{{ article.id }}">Delete</button>
                         </div>
                     </div>
                 </div>
-                
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">
-                {% endif %}
                 {% endif %}
                 {% endfor %}
 
