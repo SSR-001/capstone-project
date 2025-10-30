@@ -9,7 +9,7 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Create a new article</h5>
-            <form method="post" action="{% url 'article_create' %}">
+            <form method="post" action="{% url 'article_create' %}" aria-label="Create new article form">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="id_title" class="form-label">Title</label>
@@ -37,7 +37,7 @@
                 {% for article in article_list %}
                 {% if article.writer == user %}
                 <div class="col-12 col-md-8 col-lg-6">
-                    <div class="card mb-4">
+                    <article class="card mb-4" aria-label="Article by {{ article.writer }}">
                         <div class="card-body text-center">
                             <div class="image-container">
                                 <div class="image-flash">
@@ -53,12 +53,17 @@
                             </p>
                             <a href="{% url 'article_edit' article.pk %}"
                             class="btn btn-sm btn-outline-primary btn-edit"
-                            data-id="{{ article.id }}">
+                            data-id="{{ article.id }}"
+                            aria-label="Edit article: {{ article.title }}">
                             Edit
                             </a>
-                            <button class="btn btn-delete" data-id="{{ article.id }}">Delete</button>
+                            <button class="btn btn-delete" 
+                                    data-id="{{ article.id }}"
+                                    aria-label="Delete article: {{ article.title }}">
+                                Delete
+                            </button>
                         </div>
-                    </div>
+                    </article>
                 </div>
                 {% endif %}
                 {% endfor %}

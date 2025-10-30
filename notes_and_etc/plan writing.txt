@@ -48,3 +48,41 @@ in Codestar, in blog.views.py, there is a class that runs a django function that
 it and  basically displays attributes of each item in the list.
 
 do i need to mess with statics for this to work?
+
+
+~~~~~
+30/10: things I need to do still
+
+IN THE CODE:
+-accessibility: aria-labels, contrast checks, and check if there is anything else for accessibility
+-make sure the superuser approval system works
+-Make the links in the header work
+    -Could do: change sizes of edit and delete buttons
+-make sure you can only edit and delete your own articles: either have them not appear or block them working
+-delete test data and test users
+-make sure the content is ok
+    -Could do: hero banner thing
+-stop the article titles being links (they get the finger, change colour, etc)
+-add a heading explaining the site at the top of articles list
+-add explainer to top of my subs
+-look at the posts, users in admin
+-have something on the my subs articles saying both is-draft and is-awaiting-approval
+-something about tidying up the code (comments, readability?) see LO 1.4
+-harmonize the colours of the buttons
+-notification messages of data changes - see LO 2.3
+-form validation - LO 2.4
+-access control LO 3.3
+-write or get AI to write tests in python, maybe also JS - LO 4.1-4.3
+-make sure it displays at all sizes
+-my subs displays articles side by side, it shouldnt
+-turn off debug
+
+OUTSIDE THE CODE:
+-write in readme about ux design
+-do user stories
+-write in readme about agile(user stories)
+-write about testing - LO  4.3
+-do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2
+-(See below as well) write about deploying to heroku - LO 6.2
+-deploy to heroku, make sure it works the same - LO 6.1-6.3
+-write in readme about AI - LO 8.1-8.4

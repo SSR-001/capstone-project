@@ -15,7 +15,7 @@
             <div class="row justify-content-center">
                 {% for article in article_list %}
                 <div class="col-12">
-                    <div class="card mb-4">
+                    <article class="card mb-4" aria-label="Article by {{ article.writer }}">
                         <div class="card-body text-center">
                             <div class="image-container">
                                 <div class="image-flash">
@@ -33,12 +33,17 @@
                             {% comment %} Edit/Delete controls: anchor has href fallback and data-id for JS handler {% endcomment %}
                             <a href="{% url 'article_edit' article.pk %}"
                                class="btn btn-sm btn-outline-primary btn-edit"
-                               data-id="{{ article.id }}">
+                               data-id="{{ article.id }}"
+                               aria-label="Edit article: {{ article.title }}">
                                 Edit
                             </a>
-                            <button class="btn btn-delete" data-id="{{ article.id }}">Delete</button>
+                            <button class="btn btn-delete" 
+                                    data-id="{{ article.id }}"
+                                    aria-label="Delete article: {{ article.title }}">
+                                Delete
+                            </button>
                         </div>
-                    </div>
+                    </article>
                 </div>
                 {% endfor %}
 
