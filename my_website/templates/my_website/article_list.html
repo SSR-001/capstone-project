@@ -23,9 +23,7 @@
                                     {% comment %} <p> article ID: {{ article.id }}</p> <!-- FYI, This works!!! --> {% endcomment %}
                                 </div>
                             </div>
-                            <a href="#" class="post-link">
-                                <h2 class="card-title">{{ article.title }}</h2>
-                            </a>
+                            <h2 class="card-title">{{ article.title }}</h2>
                             {{ article.article_body}}
                             <hr />
                             <p class="card-text text-muted h6">{{ article.date_written}}
@@ -37,7 +35,8 @@
                                aria-label="Edit article: {{ article.title }}">
                                 Edit
                             </a>
-                            <button class="btn btn-delete" 
+                            <button type="button" 
+                                    class="btn btn-delete" 
                                     data-id="{{ article.id }}"
                                     aria-label="Delete article: {{ article.title }}">
                                 Delete

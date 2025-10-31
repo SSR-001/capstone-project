@@ -3,14 +3,14 @@
 {% url 'home' as home_url %}
 {% url 'account_login' as login_url %}
 {% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url%}
-{% comment %} this not complete {% endcomment %}
-{% comment %} my_submissions_url = 0  {% endcomment %}
+{% url 'account_logout' as logout_url %}
+{% url 'my_submissions' as my_submissions_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <title>scott's blog (change title)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -45,7 +45,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
-                            href="#">Home</a>
+                            href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item"> 
@@ -53,9 +53,9 @@
                         href="{% url 'account_logout' %}">Logout</a>
                     </li>
                     <li class="nav-item">
-                        {% comment %} re below, I need to create a my_submissions_url {% endcomment %}
-                        <a class="nav-link {% comment %} {% if request.path == my_submissions_url %}active{% endif %} {% endcomment %}" aria-current="page"
-                        {% comment %}href="{% url 'my_submissions_url' %}"{% endcomment %}>My Submissions</a>
+                        <a class="nav-link {% if request.path == my_submissions_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'my_submissions' %}">My Submissions</a>
+                    </li>
                     {% else %}
                     <li class="nav-item">
                         <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" 
@@ -86,10 +86,11 @@
     <!-- Footer -->
     <footer class="footer mt-auto py-3 dark-bg">
         <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center text-white">Follow us: 
+            <a href="#" aria-label="Visit our Facebook page"><i class="fab fa-facebook-square ms-3"></i></a>
+            <a href="#" aria-label="Visit our Twitter page"><i class="fab fa-twitter-square ms-3"></i></a>
+            <a href="#" aria-label="Visit our Instagram page"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="#" aria-label="Visit our YouTube channel"><i class="fab fa-youtube-square ms-3"></i></a>
         </p>
         Can you see this footer?
     </footer>
