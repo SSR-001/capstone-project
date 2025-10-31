@@ -27,11 +27,44 @@ body {
 }
 
 .dark-bg {
-    background-color: #445261;
+    background-color: #8d8d8d;
 }
 
-.main-bg {
-    /* background-color: #F9FAFC; */
+/* Navbar styling */
+.navbar {
+    background-color: #8d8d8d !important;
+}
+
+.navbar-brand,
+.navbar-brand .brand,
+.navbar-brand .red-o,
+.navbar-brand .thin,
+.nav-link,
+.navbar-text {
+    color: white !important;
+}
+
+.nav-item {
+    margin: 0 1.5rem;
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* Footer styling */
+.footer {
+    background-color: #8d8d8d;
+    color: white;
+}
+
+.footer p,
+.footer a {
+    color: white !important;
 }
 
 .card {
@@ -194,6 +227,8 @@ body {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     line-height: 1.4;
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
 }
 
 .intro-text {
@@ -213,9 +248,30 @@ body {
     }
 }
 
+/* Page header/description styling */
+.page-header {
+    padding: 1rem;
+}
+
+.page-description {
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
+@media (max-width: 768px) {
+    .page-description {
+        font-size: 0.9rem;
+    }
+}
+
 /* Author box styling */
 .author-box {
-    background-color: #6c757d;
+    background-color: #8d8d8d;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     border-radius: 4px;
