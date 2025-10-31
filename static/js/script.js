@@ -73,4 +73,61 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// == Delete-button handler ==
+// Helper to get CSRF token from cookies
+function getCookie(name) {
+	let cookieValue = null;
+	if (document.cookie && document.cookie !== '') {
+		const cookies = document.cookie.split(';');
+		for (let i = 0; i < cookies.length; i++) {
+			const cookie = cookies[i].trim();
+			if (cookie.substring(0, name.length + 1) === (name + '=')) {
+				cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+				break;
+			}
+		}
+	}
+	return cookieValue;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	const deleteButtons = document.querySelectorAll('.btn-delete');
+
+	deleteButtons.forEach((btn) => {
+		btn.addEventListener('click', (e) => {
+			const id = btn.dataset && btn.dataset.id ? btn.dataset.id : btn.getAttribute('data-id');
+			if (!id) {
+				console.warn('Delete button clicked but no data-id found on element:', btn);
+				return;
+			}
+
+			// Confirm before deleting
+			if (window.confirm('Are you sure you want to delete this article?')) {
+				const csrftoken = getCookie('csrftoken');
+				
+				// Send DELETE request
+				fetch(`/articles/${id}/delete/`, {
+					method: 'POST',
+					headers: {
+						'X-CSRFToken': csrftoken,
+						'Content-Type': 'application/json'
+					}
+				})
+				.then(response => {
+					if (response.ok) {
+						// Redirect to my_submissions page
+						window.location.href = '/my_submissions/';
+					} else {
+						alert('Error deleting article');
+					}
+				})
+				.catch(error => {
+					console.error('Error:', error);
+					alert('Error deleting article');
+				});
+			}
+		});
+	});
+});
+
 

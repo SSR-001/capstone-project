@@ -6,6 +6,15 @@
 <form method="post">
   {% csrf_token %}
   {{ form.as_p }}
+  
+  <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="id_ready_for_approval" name="ready_for_approval" value="1"
+    {% if article.ready_for_approval == 1 %}checked{% endif %}>
+    <label class="form-check-label" for="id_ready_for_approval">
+      Request approval to publish this article
+    </label>
+  </div>
+  
   <button type="submit" class="btn btn-primary">
     {% if article %}Save changes{% else %}Create article{% endif %}
   </button>

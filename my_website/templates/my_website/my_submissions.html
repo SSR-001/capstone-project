@@ -19,6 +19,12 @@
                     <label for="id_article_body" class="form-label">Article body</label>
                     <textarea class="form-control" id="id_article_body" name="article_body" rows="6" placeholder="Write your article here..." required></textarea>
                 </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="id_ready_for_approval" name="ready_for_approval" value="1">
+                    <label class="form-check-label" for="id_ready_for_approval">
+                        Request approval to publish this article
+                    </label>
+                </div>
                 <button type="submit" class="btn btn-primary">Create article</button>
             </form>
         </div>
@@ -36,7 +42,7 @@
             <div class="row justify-content-center">
                 {% for article in article_list %}
                 {% if article.writer == user %}
-                <div class="col-12 col-md-8 col-lg-6">
+                <div class="col-12">
                     <article class="card mb-4" aria-label="Article by {{ article.writer }}">
                         <div class="card-body text-center">
                             <div class="image-container">
@@ -49,17 +55,33 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ article.date_written }}
                             </p>
+                            
+                            {# Status badges #}
+                            <div class="mb-3">
+                                {% if article.approved == 1 %}
+                                    <span class="badge bg-primary">Published</span>
+                                {% else %}
+                                    <span class="badge bg-primary">Draft</span>
+                                {% endif %}
+                                
+                                {% if article.ready_for_approval == 1 %}
+                                    <span class="badge bg-primary">Approval Requested</span>
+                                {% else %}
+                                    <span class="badge bg-primary">Not Ready For Approval</span>
+                                {% endif %}
+                            </div>
+                            
                             <a href="{% url 'article_edit' article.pk %}"
                             class="btn btn-sm btn-outline-primary btn-edit"
                             data-id="{{ article.id }}"
                             aria-label="Edit article: {{ article.title }}">
-                            Edit Above Article
+                            Edit The Above
                             </a>
                             <button type="button" 
                                     class="btn btn-delete" 
                                     data-id="{{ article.id }}"
                                     aria-label="Delete article: {{ article.title }}">
-                                Delete Above Article
+                                Delete The Above
                             </button>
                         </div>
                     </article>

@@ -78,6 +78,7 @@ IN THE CODE:
 -page titles need to be proper titles
 -put up arrow in the edit and delete buttons
 -a decent space at the bottom of each article to show what the buttons apply to.
+-see CSS line 33 - empty ruleset - can I delete?
 
 OUTSIDE THE CODE:
 -write in readme about ux design
@@ -86,10 +87,12 @@ OUTSIDE THE CODE:
 -write about testing - LO  4.3
 -do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2
 -(See below as well) write about deploying to heroku - LO 6.2
--deploy to heroku, make sure it works the same - LO 6.1-6.3
--write in readme about AI - LO 8.1-8.4                                                      <<<<<<<<<<<<<<---------------------- NEXT<<<<<<<<<<<<<<---------------------- NEXT
-- put all headings in readme                                                                <<<<<<<<<<<<<<---------------------- NEXT<<<<<<<<<<<<<<---------------------- NEXT<<<<<<<<<<<<<<---------------------- NEXT
+-deploy to heroku, make sure it works the same - LO 6.1-6.3 
+-write in readme about AI - LO 8.1-8.4 /~                                    
+- put all headings in readme /~                                                           
 -do i need to spellcheck?
+-check what I wrote in readme against the relevant LO's
+-check everything against the LO's
 
 COULD DO:
 -Could do: hero banner thing

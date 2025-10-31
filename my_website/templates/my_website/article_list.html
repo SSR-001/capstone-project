@@ -28,19 +28,6 @@
                             <hr />
                             <p class="card-text text-muted h6">{{ article.date_written}}
                             </p>
-                            {% comment %} Edit/Delete controls: anchor has href fallback and data-id for JS handler {% endcomment %}
-                            <a href="{% url 'article_edit' article.pk %}"
-                               class="btn btn-sm btn-outline-primary btn-edit"
-                               data-id="{{ article.id }}"
-                               aria-label="Edit article: {{ article.title }}">
-                                Edit
-                            </a>
-                            <button type="button" 
-                                    class="btn btn-delete" 
-                                    data-id="{{ article.id }}"
-                                    aria-label="Delete article: {{ article.title }}">
-                                Delete
-                            </button>
                         </div>
                     </article>
                 </div>
