@@ -33,6 +33,7 @@ class MySubmissions(generic.ListView):
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
+from django.contrib import messages
 from .models import Article
 from .forms import ArticleForm
 
@@ -71,6 +72,12 @@ def create_or_edit_article(request, pk=None):
             obj.save()
             # adjust redirect target to where you want to go after save
             
+            # Add success message
+            if pk:
+                messages.success(request, 'Article updated successfully!')
+            else:
+                messages.success(request, 'Article created successfully!')
+            
             return redirect('/my_submissions/')  # or 'article_detail', '/' etc.
         
         # if invalid: fall through and render template with form.errors
@@ -95,6 +102,7 @@ def delete_article(request, pk):
     
     if request.method == 'POST':
         article.delete()
+        messages.success(request, 'Article deleted successfully!')
         return redirect('my_submissions')
     
     # If not POST, redirect to my subs

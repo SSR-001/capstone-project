@@ -110,13 +110,17 @@ document.addEventListener('DOMContentLoaded', () => {
 					method: 'POST',
 					headers: {
 						'X-CSRFToken': csrftoken,
-						'Content-Type': 'application/json'
-					}
+					},
 				})
 				.then(response => {
-					if (response.ok) {
-						// Redirect to my_submissions page
-						window.location.href = '/my_submissions/';
+					if (response.ok || response.status === 302) {
+						// Show success toast
+						showDeleteToast();
+						
+						// Redirect after a brief delay to show the toast
+						setTimeout(() => {
+							window.location.href = '/my_submissions/';
+						}, 1500);
 					} else {
 						alert('Error deleting article');
 					}
@@ -129,5 +133,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 });
+
+
+// == Toast notification function ==
+function showDeleteToast() {
+	const toastEl = document.getElementById('deleteToast');
+	if (toastEl) {
+		const toast = new bootstrap.Toast(toastEl);
+		toast.show();
+	}
+}
+
 
 

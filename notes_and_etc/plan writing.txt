@@ -67,9 +67,9 @@ IN THE CODE:
     -have something on the my subs articles saying both is-draft and is-awaiting-approval /
 -something about tidying up the code (comments, readability?) see LO 1.4
     -harmonize the colours of the buttons/
--notification messages of data changes - see LO 2.3                 <<<<<<<<<<<< next, less easy
--form validation - LO 2.4
--access control LO 3.3
+    -notification messages of data changes - see LO 2.3 /                
+    -form validation - LO 2.4 /
+    -access control LO 3.3 /
 -write or get AI to write tests in python, maybe also JS - LO 4.1-4.3 - quickly skim the LMS content again on this first.
     -my subs displays articles side by side, it shouldnt/
 -turn off debug
@@ -80,10 +80,11 @@ IN THE CODE:
     -see CSS line 33 - empty ruleset - can I delete? do at end /
     -make sure it displays right on all device sizes /
     -sort out header and footer/ 
--register page not formatted
+    -register page not formatted/
 
 OUTSIDE THE CODE:
--write in readme about ux design
+-write in readme about ux design: 
+-    finish wireframes, save screenshots of them in the appropriate folder
 -do user stories /
 -write in readme about agile(user stories)
 -write about testing - LO  4.3
