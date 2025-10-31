@@ -45,14 +45,11 @@
                 <div class="col-12">
                     <article class="card mb-4" aria-label="Article by {{ article.writer }}">
                         <div class="card-body text-center">
-                            <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Writer: {{ article.writer }}</p>
-                                </div>
-                            </div>
                             <h2 class="card-title">{{ article.title }}</h2>
                             {{ article.article_body}}
-                            <hr />
+                            <div class="author-box">
+                                <p class="author-name">Written by {{ article.writer }}</p>
+                            </div>
                             <p class="card-text text-muted h6">{{ article.date_written }}
                             </p>
                             
@@ -83,6 +80,7 @@
                                     aria-label="Delete article: {{ article.title }}">
                                 Delete The Above
                             </button>
+                            <hr />
                         </div>
                     </article>
                 </div>

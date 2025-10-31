@@ -10,6 +10,19 @@
 <div class="container-fluid">
     <div class="row">
 
+        <!-- Introduction Section -->
+        <div class="col-12 mt-5 mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-8">
+                    <div class="intro-section text-center">
+                        <h1 class="intro-title mb-4">Low-Res Memories</h1>
+                        <p class="intro-text">A journal about the nostalgia from the games we played as kids.<br>
+                        You can submit your own articles if you sign up and click "My Submissions" at the top of the page.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Blog Entries Column -->
         <div class="col-12 mt-3">
             <div class="row justify-content-center">
@@ -17,17 +30,14 @@
                 <div class="col-12">
                     <article class="card mb-4" aria-label="Article by {{ article.writer }}">
                         <div class="card-body text-center">
-                            <div class="image-container">
-                                <div class="image-flash">
-                                    <p class="author">Writer: {{ article.writer }}</p>
-                                    {% comment %} <p> article ID: {{ article.id }}</p> <!-- FYI, This works!!! --> {% endcomment %}
-                                </div>
-                            </div>
                             <h2 class="card-title">{{ article.title }}</h2>
                             {{ article.article_body}}
-                            <hr />
+                            <div class="author-box">
+                                <p class="author-name">Written by {{ article.writer }}</p>
+                            </div>
                             <p class="card-text text-muted h6">{{ article.date_written}}
                             </p>
+                            <hr />
                         </div>
                     </article>
                 </div>

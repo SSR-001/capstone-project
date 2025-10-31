@@ -10,7 +10,7 @@ from .forms import ArticleForm
 #     return HttpResponse("Hello, World!")
 
 class ArticleList(generic.ListView):
-    queryset = Article.objects.filter(approved=1)
+    queryset = Article.objects.filter(approved=1).order_by('-date_written')
     template_name = "my_website/article_list.html"
     # paginate_by = 6
 
