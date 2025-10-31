@@ -11,7 +11,7 @@ from django_summernote.admin import SummernoteModelAdmin
 class ArticleAdmin(SummernoteModelAdmin):  #is this the best name?
     #field names in model:
     # title/, article_body/, writer/, date written/, approved/, slug/, updated on/, blurb/, order/
-    list_display = ('slug', 'date_written') #"writer" taken out of this
+    list_display = ('title', 'writer', 'ready_for_approval', 'approved',) 
     search_fields = ['article_body'] #"writer" taken out of this
     list_filter = ('approved', 'date_written')
     prepoulated_fields = {'slug': ('title',)}

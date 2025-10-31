@@ -54,16 +54,16 @@ do i need to mess with statics for this to work?
 30/10: things I need to do still
 
 IN THE CODE:
--accessibility: aria-labels, contrast checks, and check if there is anything else for accessibility/~
+    -accessibility: aria-labels, contrast checks, and check if there is anything else for accessibility/
     -make sure the superuser approval system works/
     -Make the links in the header work /
     -make sure you can only edit and delete your own articles: either have them not appear or block them working/
--delete test data and test users
--make sure the content is ok
+    -delete test data and test users/
+    -make sure the content is ok/
     -stop the article titles being links (they get the finger, change colour, etc) /
     -add a heading explaining the site at the top of articles list /
     -add explainer to top of my subs/
--look at the posts, users in admin
+    -look at the posts, users in admin/
     -have something on the my subs articles saying both is-draft and is-awaiting-approval /
 -something about tidying up the code (comments, readability?) see LO 1.4
     -harmonize the colours of the buttons/
@@ -74,12 +74,13 @@ IN THE CODE:
     -my subs displays articles side by side, it shouldnt/
 -turn off debug
     -decide on a name for the site and put that in the header and title/
--page titles need to be proper titles   ---------
+    -page titles need to be proper titles/   
     -put up arrow in the edit and delete buttons/
     -a decent space at the bottom of each article to show what the buttons apply to./
--see CSS line 33 - empty ruleset - can I delete? do at end
--make sure it displays right on all device sizes   ---------
--sort out header and footer ----------
+    -see CSS line 33 - empty ruleset - can I delete? do at end /
+    -make sure it displays right on all device sizes /
+    -sort out header and footer/ 
+-register page not formatted
 
 OUTSIDE THE CODE:
 -write in readme about ux design
