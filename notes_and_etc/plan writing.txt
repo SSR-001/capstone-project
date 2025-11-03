@@ -96,6 +96,7 @@ OUTSIDE THE CODE:
 -do i need to spellcheck?
 -check what I wrote in readme against the relevant LO's
 -check everything against the LO's
+-look at example projects
 
 COULD DO:
 -Could do: hero banner thing
