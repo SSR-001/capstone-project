@@ -81,22 +81,26 @@ IN THE CODE:
     -make sure it displays right on all device sizes /
     -sort out header and footer/ 
     -register page not formatted/
+-Ensure the final committed code is free of passwords or security-sensitive information before deployment to the repository and hosting platform.
 
 OUTSIDE THE CODE:
--write in readme about ux design: 
--    finish wireframes, save screenshots of them in the appropriate folder
--do user stories /
--write in readme about agile(user stories)
+    -write in readme about ux design: /
+    -    finish wireframes, save screenshots of them in the appropriate folder/
+    -do user stories /
+    -write in readme about agile(user stories)/
+-   add could haves
 -write about testing - LO  4.3
--do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2
+    -do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2/
 -(See below as well) write about deploying to heroku - LO 6.2
 -deploy to heroku, make sure it works the same - LO 6.1-6.3 
--write in readme about AI - LO 8.1-8.4 /~                                    
+    -write in readme about AI - LO 8.1-8.4 //                           
 - put all headings in readme /~                                                           
 -do i need to spellcheck?
 -check what I wrote in readme against the relevant LO's
 -check everything against the LO's
 -look at example projects
+-write about the accessibility if I haven't already
+-format readme properly
 
 COULD DO:
 -Could do: hero banner thing

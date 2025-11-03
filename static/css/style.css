@@ -305,3 +305,20 @@ body {
   font-weight: 400;
   font-style: normal;
 }
+
+/* Form field styling - fix for label overlapping input */
+form p {
+    position: relative;
+}
+
+form p label {
+    display: block;
+    margin-bottom: 0.5rem;
+    pointer-events: none;
+}
+
+form p input,
+form p textarea,
+form p select {
+    pointer-events: auto;
+}
