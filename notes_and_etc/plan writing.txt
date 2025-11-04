@@ -65,12 +65,12 @@ IN THE CODE:
     -add explainer to top of my subs/
     -look at the posts, users in admin/
     -have something on the my subs articles saying both is-draft and is-awaiting-approval /
--something about tidying up the code (comments, readability?) see LO 1.4
+    -something about tidying up the code (comments, readability?) see LO 1.4/
     -harmonize the colours of the buttons/
     -notification messages of data changes - see LO 2.3 /                
     -form validation - LO 2.4 /
     -access control LO 3.3 /
--write or get AI to write tests in python, maybe also JS - LO 4.1-4.3 - quickly skim the LMS content again on this first.
+    -write or get AI to write tests in python, maybe also JS - LO 4.1-4.3 - quickly skim the LMS content again on this first./
     -my subs displays articles side by side, it shouldnt/
 -turn off debug
     -decide on a name for the site and put that in the header and title/
@@ -82,9 +82,10 @@ IN THE CODE:
     -sort out header and footer/ 
     -register page not formatted/
 -Ensure the final committed code is free of passwords or security-sensitive information before deployment to the repository and hosting platform.
--docstrings
+-code verification for all the files that i dont know what they are?
+    -docstrings/
 -remove unused things in admin?
--delete a.html
+    -delete a.html/
 
 OUTSIDE THE CODE:
     -write in readme about ux design: /
@@ -92,7 +93,7 @@ OUTSIDE THE CODE:
     -do user stories /
     -write in readme about agile(user stories)/
 -   add could haves
--write about testing - LO  4.3  /
+    -write about testing - LO  4.3  /
 -   how much do I need to write?
 -   can i demonstrate that it tests python and js?
     -do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2/
@@ -100,23 +101,24 @@ OUTSIDE THE CODE:
     -   whitenoise - add a bullet point, see the guide/
     -deploy to heroku, make sure it works the same - LO 6.1-6.3 /
     -write in readme about AI - LO 8.1-8.4 //                           
-- put all headings in readme /~                                                           
+    - put all headings in readme //                
 -do i need to spellcheck?
 -check what I wrote in readme against the relevant LO's
 -check everything against the LO's
 -look at example projects
 -write about the accessibility if I haven't already
--format readme properly
--put readme sections in the same order as LO's
--newlines not working in readme
+    -format readme properly/
+    -put readme sections in the same order as LO's/
+    -newlines not working in readme/
+-look through all the notes
 
 COULD DO:
--Could do: hero banner thing
--Could do: change sizes of edit and delete buttons
+    -Could do: hero banner thing X
+    -Could do: change sizes of edit and delete buttons /
 
 
 
 
 
-look through the notes in VSCODE
+
 

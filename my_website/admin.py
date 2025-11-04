@@ -7,7 +7,7 @@ from django_summernote.admin import SummernoteModelAdmin
 
 @admin.register(Article)
 class ArticleAdmin(SummernoteModelAdmin):
-    # field names in model:
+    # field names in the model:
     # title/, article_body/, writer/, date written/, approved/, slug/,
     # updated on/, blurb/, order/
     list_display = ('title', 'writer', 'ready_for_approval', 'approved',)

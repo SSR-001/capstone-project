@@ -34,18 +34,18 @@ def create_or_edit_article(request, pk=None):
     if pk:
         article = get_object_or_404(Article, pk=pk)
 
-        # If your model has a writer field and you want only owners to edit:
+        # Only owners can edit their articles
         if hasattr(article, 'writer') and article.writer is not None:
             if article.writer != request.user:
                 return HttpResponseForbidden("You may only edit your own articles.")
 
     if request.method == "POST":
-        # bind the form to POST; pass instance for edit
+        # bind the form to POST, pass instance for edit
         form = ArticleForm(request.POST, instance=article) if article else ArticleForm(request.POST)
         if form.is_valid():
             obj = form.save(commit=False)
             # Always set writer for new articles; preserve existing writer when editing
-            if not obj.pk:  # new article (no primary key yet)
+            if not obj.pk:
                 obj.writer = request.user
 
             # Handle the ready_for_approval checkbox
@@ -63,7 +63,7 @@ def create_or_edit_article(request, pk=None):
             else:
                 messages.success(request, 'Article created successfully!')
 
-            return redirect('/my_submissions/')  # or 'article_detail', '/' etc.
+            return redirect('/my_submissions/')
 
         # if invalid: fall through and render template with form.errors
     else:

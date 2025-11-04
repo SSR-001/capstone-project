@@ -1,4 +1,4 @@
-// == Edit-button navigation handler ==
+//  Edit-button navigation handler
 // Buttons in the template use: class="btn btn-edit" data-id="{{ article.id }}"
 document.addEventListener('DOMContentLoaded', () => {
 	const editButtons = document.querySelectorAll('.btn-edit');
@@ -19,8 +19,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// == Delete-button handler ==
-// Helper to get CSRF token from cookies
+// Delete-button handler
+/**
+ * Retrieves the value of a cookie by name from the browser's cookie storage.
+ * Used primarily to get the CSRF token for Django POST requests.
+ * 
+ * @param {string} name - The name of the cookie to retrieve
+ * @returns {string|null} The decoded cookie value if found, null otherwise
+ */
 function getCookie(name) {
 	let cookieValue = null;
 	if (document.cookie && document.cookie !== '') {
@@ -81,7 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// == Toast notification function ==
+/**
+ * Displays a Bootstrap toast notification confirming successful article deletion.
+ * Shows a centered success message before redirecting the user to the submissions page.
+ * 
+ * @requires Bootstrap Toast component to be available in the DOM
+ */
 function showDeleteToast() {
 	const toastEl = document.getElementById('deleteToast');
 	if (toastEl) {
@@ -89,6 +100,3 @@ function showDeleteToast() {
 		toast.show();
 	}
 }
-
-
-
