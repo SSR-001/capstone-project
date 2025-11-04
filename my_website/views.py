@@ -1,15 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
+from django.http import HttpResponse, HttpResponseForbidden
 from .models import Article
 from django.views import generic
 from .forms import ArticleForm
-
-from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseForbidden
 from django.contrib import messages
-from .models import Article
-from .forms import ArticleForm
 
 # Create your views here.
 
@@ -24,9 +19,7 @@ class MySubmissions(generic.ListView):
 
     def get_queryset(self):
         # Show all articles by the current user (both draft and published)
-        return Article.objects.filter
-        (writer=self.request.user).order_by('-date_written')
-
+        return Article.objects.filter(writer=self.request.user).order_by('-date_written')
 
 
 @login_required
@@ -54,24 +47,24 @@ def create_or_edit_article(request, pk=None):
             # Always set writer for new articles; preserve existing writer when editing
             if not obj.pk:  # new article (no primary key yet)
                 obj.writer = request.user
-            
+
             # Handle the ready_for_approval checkbox
             if request.POST.get('ready_for_approval') == '1':
                 obj.ready_for_approval = 1
             else:
                 obj.ready_for_approval = 0
-            
+
             obj.save()
             # adjust redirect target to where you want to go after save
-            
+
             # Add success message
             if pk:
                 messages.success(request, 'Article updated successfully!')
             else:
                 messages.success(request, 'Article created successfully!')
-            
+
             return redirect('/my_submissions/')  # or 'article_detail', '/' etc.
-        
+
         # if invalid: fall through and render template with form.errors
     else:
         form = ArticleForm(instance=article) if article else ArticleForm()
@@ -80,22 +73,23 @@ def create_or_edit_article(request, pk=None):
         "form": form,
         "article": article,
     })
-    
+
+
 @login_required
 def delete_article(request, pk):
     """
     Delete an article. Only the owner can delete.
     """
     article = get_object_or_404(Article, pk=pk)
-    
+
     # Check if user is the owner
     if hasattr(article, 'writer') and article.writer != request.user:
         return HttpResponseForbidden("You can only delete your own articles.")
-    
+
     if request.method == 'POST':
         article.delete()
         messages.success(request, 'Article deleted successfully!')
         return redirect('my_submissions')
-    
+
     # If not POST, redirect to my subs
     return redirect('my_submissions')

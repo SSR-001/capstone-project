@@ -181,6 +181,13 @@ for these errors, it was over on under indented
 11: E128 continuation line under-indented for visual indent
 13: E128 continuation line under-indented for visual indent
 
+views.py:
+making these line shorter gives a syntax error:
+22: E501 line too long (89 > 79 characters)
+40: E501 line too long (84 > 79 characters)
+44: E501 line too long (100 > 79 characters)
+47: E501 line too long (87 > 79 characters)
+66: E501 line too long (80 > 79 characters)
 
 
 DO HTML TRAINLING SLASH AGAIN

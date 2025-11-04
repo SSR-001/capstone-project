@@ -22,7 +22,7 @@ from https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_KC+3
             <form method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}">
                 {% endif %}
                 <button class="btn btn-signup right" type="submit">{% trans 'Sign Out' %}</button>
             </form>
