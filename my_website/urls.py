@@ -1,13 +1,14 @@
 from django.urls import path
-# from .views import home_page_view
 from .views import ArticleList, MySubmissions
-from . import views #this is from AI
+from . import views
 
 urlpatterns = [
     path("my_submissions/", MySubmissions.as_view(), name="my_submissions"),
-    path('articles/create/', views.create_or_edit_article, name='article_create'), #this is from AI
-    path('articles/<int:pk>/edit/', views.create_or_edit_article, name='article_edit'), #this is from AI
-    path('articles/<int:pk>/delete/', views.delete_article, name='article_delete'), #delete functionality
-    # path("", home_page_view),
+    path('articles/create/', views.create_or_edit_article,
+        name='article_create'),
+    path('articles/<int:pk>/edit/', views.create_or_edit_article,
+        name='article_edit'),
+    path('articles/<int:pk>/delete/', views.delete_article,
+        name='article_delete'),
     path("", ArticleList.as_view(), name='home'),
 ]

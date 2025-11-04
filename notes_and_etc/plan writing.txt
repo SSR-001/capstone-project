@@ -84,6 +84,7 @@ IN THE CODE:
 -Ensure the final committed code is free of passwords or security-sensitive information before deployment to the repository and hosting platform.
 -docstrings
 -remove unused things in admin?
+-delete a.html
 
 OUTSIDE THE CODE:
     -write in readme about ux design: /
@@ -91,13 +92,13 @@ OUTSIDE THE CODE:
     -do user stories /
     -write in readme about agile(user stories)/
 -   add could haves
--write about testing - LO  4.3  /~
+-write about testing - LO  4.3  /
 -   how much do I need to write?
 -   can i demonstrate that it tests python and js?
     -do I need to write about GIT's use? check nothing sensitive is on Git - LO 5.1-5.2/
     -(See below as well) write about deploying to heroku - LO 6.2/
     -   whitenoise - add a bullet point, see the guide/
--deploy to heroku, make sure it works the same - LO 6.1-6.3 
+    -deploy to heroku, make sure it works the same - LO 6.1-6.3 /
     -write in readme about AI - LO 8.1-8.4 //                           
 - put all headings in readme /~                                                           
 -do i need to spellcheck?
@@ -107,7 +108,15 @@ OUTSIDE THE CODE:
 -write about the accessibility if I haven't already
 -format readme properly
 -put readme sections in the same order as LO's
+-newlines not working in readme
 
 COULD DO:
 -Could do: hero banner thing
 -Could do: change sizes of edit and delete buttons
+
+
+
+
+
+look through the notes in VSCODE
+

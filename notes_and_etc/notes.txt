@@ -100,3 +100,87 @@ so... each article will go to "my submissions". new binary in table, "draft/requ
  son't forget each awaiting approval article needs an edit button.
 
  CURRENTLY I am messing with crispy forms, following the LMS, working in forms.py in my_website. The user article creation will need that.
+
+
+
+ 4-11-25:
+ notes from lewis's tips on the LO's (not finished):
+
+ link:
+ https://discord.com/channels/1371431903663489024/1398294474051813526/1428679448680730735
+
+ front end design:
+ i think ok but come back to double-check
+
+agile:
+create milestones
+are user stories labelled with the MoSCoW system?
+
+code quality:
+They want to see formatted code, code comments, docstrings to explain functions, and good descriptive variable, function, and file names.
+
+
+
+1 custom model:
+You must remove any model fields which your site does not use, and add some model fields which the walkthrough did not use. 
+
+notes from checking every LO:
+
+
+
+
+
+validation notes:
+
+html:
+used https://validator.w3.org/ 
+
+base html:
+some errors cause by it not understanding django tags, but no further issues
+
+my_submissions.html:
+
+create or edit .html:
+
+article_list:
+
+did login, logout, register
+all had trailing slash, but that doesnt matter and there are no bugs.
+
+style and messages.css:
+used https://jigsaw.w3.org/css-validator/
+
+both no errors
+
+script.js:
+used jshint.com
+
+mentions of certain things are onlu avaiable in ES6, not treated as an error.
+
+python:
+used pep8
+config/urls.py:
+no errors
+
+settings.py:
+    auth_password_validators: each line of key value pairs was over 79 characters,
+    I pyt the value on a second line, however the first one was still too long and there was nothing I could do about it.
+
+admin.py:
+    no errors
+
+apps.py:
+no errors
+
+models.py:
+got the error "18: E128 continuation line under-indented for visual indent", it either said this was over or under indented.
+
+urls.py:
+for these errors, it was over on under indented
+9: E128 continuation line under-indented for visual indent
+11: E128 continuation line under-indented for visual indent
+13: E128 continuation line under-indented for visual indent
+
+
+
+DO HTML TRAINLING SLASH AGAIN
