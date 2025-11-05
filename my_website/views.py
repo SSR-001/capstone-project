@@ -19,7 +19,9 @@ class MySubmissions(generic.ListView):
 
     def get_queryset(self):
         # Show all articles by the current user (both draft and published)
-        return Article.objects.filter(writer=self.request.user).order_by('-date_written')
+        return (Article.objects
+                .filter(writer=self.request.user)
+                .order_by('-date_written'))
 
 
 @login_required
@@ -37,14 +39,17 @@ def create_or_edit_article(request, pk=None):
         # Only owners can edit their articles
         if hasattr(article, 'writer') and article.writer is not None:
             if article.writer != request.user:
-                return HttpResponseForbidden("You may only edit your own articles.")
+                return (HttpResponseForbidden
+                        ("You may only edit your own articles."))
 
     if request.method == "POST":
         # bind the form to POST, pass instance for edit
-        form = ArticleForm(request.POST, instance=article) if article else ArticleForm(request.POST)
+        form = (ArticleForm(request.POST, instance=article)
+                if article else ArticleForm(request.POST))
         if form.is_valid():
             obj = form.save(commit=False)
-            # Always set writer for new articles; preserve existing writer when editing
+            # Always set writer for new articles
+            # and preserve existing writer when editing
             if not obj.pk:
                 obj.writer = request.user
 

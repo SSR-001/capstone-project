@@ -14,7 +14,7 @@ class Article (models.Model):
     article_body = models.TextField()
     date_written = models.DateTimeField(auto_now_add=True)
     ready_for_approval = models.IntegerField(choices=REQUESTAPPROVAL,
-        default=0)
+                                             default=0)
     approved = models.IntegerField(choices=STATUS, default=0)
     when_updated = models.DateTimeField(auto_now=True)
 

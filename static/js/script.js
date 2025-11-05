@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+/* global bootstrap */
 //  Edit-button navigation handler
 // Buttons in the template use: class="btn btn-edit" data-id="{{ article.id }}"
 document.addEventListener('DOMContentLoaded', () => {
