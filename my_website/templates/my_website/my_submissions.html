@@ -3,11 +3,11 @@
 {% load crispy_forms_tags %}
 
 <!-- Page Header -->
-<div class="container mt-5 mb-4">
+<div class="container mt-5 mb-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8">
             <div class="page-header text-center">
-                <p class="page-description">Create, edit or delete your article submissions here</p>
+                <p class="page-description">Create, edit or delete your article submissions below:</p>
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
                 {% if article.writer == user %}
                 <div class="col-12">
                     <article class="card mb-4" aria-label="Article by {{ article.writer }}">
-                        <div class="card-body text-center">
+                        <div class="card-body">
                             <h2 class="card-title">{{ article.title }}</h2>
                             {{ article.article_body}}
                             <div class="author-box">
@@ -72,24 +72,33 @@
                                 {% endif %}
                                 
                                 {% if article.ready_for_approval == 1 %}
-                                    <span class="badge bg-primary">Approval Requested</span>
+                                    <span class="badge bg-primary">
+                                        <span class="d-none d-md-inline">Approval Requested</span>
+                                        <span class="d-md-none">Approval<br>Requested</span>
+                                    </span>
                                 {% else %}
-                                    <span class="badge bg-primary">Not Ready For Approval</span>
+                                    <span class="badge bg-primary">
+                                        <span class="d-none d-md-inline">Not Ready For Approval</span>
+                                        <span class="d-md-none">Not Ready For<br>Approval</span>
+                                    </span>
                                 {% endif %}
                             </div>
                             
-                            <a href="{% url 'article_edit' article.pk %}"
-                            class="btn btn-sm btn-outline-primary btn-edit"
-                            data-id="{{ article.id }}"
-                            aria-label="Edit article: {{ article.title }}">
-                            Edit The Above
-                            </a>
-                            <button type="button" 
-                                    class="btn btn-delete" 
-                                    data-id="{{ article.id }}"
-                                    aria-label="Delete article: {{ article.title }}">
-                                Delete The Above
-                            </button>
+                            <div class="mb-3">
+                                <a href="{% url 'article_edit' article.pk %}"
+                                class="btn btn-sm btn-outline-primary btn-edit"
+                                data-id="{{ article.id }}"
+                                aria-label="Edit article: {{ article.title }}">
+                                Edit The Above
+                                </a>
+                                <button type="button" 
+                                        class="btn btn-delete" 
+                                        data-id="{{ article.id }}"
+                                        aria-label="Delete article: {{ article.title }}">
+                                    <span class="d-none d-md-inline">Delete The Above</span>
+                                    <span class="d-md-none">Delete<br>The Above</span>
+                                </button>
+                            </div>
                             <hr>
                         </div>
                     </article>

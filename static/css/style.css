@@ -161,6 +161,7 @@ body {
     justify-content: center;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .btn-signup:hover,
@@ -203,6 +204,7 @@ body {
     justify-content: center;
     padding: 0.375rem 0.75rem;
     line-height: 1.5;
+    font-family: 'Press Start 2P', cursive;
 }
 
 .btn-delete:hover,
@@ -214,6 +216,34 @@ body {
 .badge {
     font-size: 1rem;
     line-height: 1.5;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* Edit form container styling */
+.edit-form-container {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    max-width: 100%;
+}
+
+.edit-form-container form {
+    max-width: 100%;
+}
+
+.edit-form-container input[type="text"],
+.edit-form-container textarea {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+    .edit-form-container {
+        padding: 1rem 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Intro section styling */
@@ -238,13 +268,133 @@ body {
     line-height: 1.8;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .intro-title {
-        font-size: 1.8rem;
+        font-size: 1.0rem;
     }
     
     .intro-text {
-        font-size: 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Reduce top margin on small screens */
+    .col-12.mt-5 {
+        margin-top: 1rem !important;
+    }
+    
+    /* Reduce bottom margin on small screens */
+    .col-12.mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Reduce padding on small screens */
+    .intro-section {
+        padding: 1rem 0.5rem;
+    }
+    
+    /* Smaller font for article text on small screens */
+    .card-body,
+    .card-text {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    .card-title {
+        font-size: 1.2rem;
+    }
+    
+    /* Apply same responsive styling to page-header */
+    .page-header {
+        padding: 1rem 0.5rem;
+    }
+    
+    .page-description {
+        font-size: 0.85rem;
+    }
+    
+    /* Reduce margins on container for page header */
+    .container.mt-5 {
+        margin-top: 1rem !important;
+    }
+    
+    .container.mb-5 {
+        margin-bottom: 1rem !important;
+    }
+    
+    /* Center badges and buttons on small screens ONLY */
+    .card-body .mb-3 {
+        text-align: center;
+    }
+    
+    .card-body .btn-edit,
+    .card-body .btn-delete {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        height: auto;
+        min-height: 48px;
+        line-height: 1.3;
+        padding: 0.5rem 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Stack badges vertically on small screens */
+    .card-body .badge {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0.5rem;
+        width: fit-content;
+    }
+    
+    /* Fix signup form on small screens */
+    form input,
+    form textarea,
+    form select {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .btn-signup {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Badges and buttons on larger screens (medium and above) */
+@media (min-width: 768px) {
+    /* Center badges and buttons horizontally on larger screens */
+    .card-body .mb-3 {
+        text-align: center;
+    }
+    
+    /* Display badges inline on larger screens */
+    .card-body .badge {
+        display: inline-block !important;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        width: auto;
+        white-space: nowrap;
+    }
+    
+    /* Display buttons inline on larger screens */
+    .card-body .btn-edit,
+    .card-body .btn-delete {
+        display: inline-block !important;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0;
+        height: 38px;
+        white-space: nowrap;
+        line-height: 38px;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
 
@@ -321,4 +471,31 @@ form p input,
 form p textarea,
 form p select {
     pointer-events: auto;
+}
+
+/* Additional fix for Bootstrap form structure */
+form .mb-3 {
+    position: relative;
+}
+
+form .mb-3 label,
+form .form-group label,
+form .form-label {
+    pointer-events: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+form .mb-3 input,
+form .mb-3 textarea,
+form .mb-3 select,
+form .form-group input,
+form .form-group textarea,
+form .form-group select,
+form .form-control {
+    pointer-events: auto;
+    position: relative;
+    z-index: 2;
 }
