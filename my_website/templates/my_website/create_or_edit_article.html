@@ -5,7 +5,7 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-12 col-md-10 col-lg-8 col-xl-6 edit-form-container">
-      <form method="post">
+      <form method="post" aria-label="{% if article %}Edit article{% else %}Create article{% endif %}">
         {% csrf_token %}
         {{ form.as_p }}
         

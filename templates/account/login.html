@@ -20,7 +20,7 @@
     </div>
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
+            <form class="login" method="POST" action="{% url 'account_login' %}" aria-label="Sign in to your account">
                 {% csrf_token %}
                 {{ form.as_p }}
                 {% if redirect_field_value %}

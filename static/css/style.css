@@ -32,7 +32,7 @@ body {
 
 /* Navbar styling */
 .navbar {
-    background-color: #8d8d8d !important;
+    background-color: #595959 !important;
 }
 
 .navbar-brand,
@@ -58,7 +58,7 @@ body {
 
 /* Footer styling */
 .footer {
-    background-color: #8d8d8d;
+    background-color: #595959;
     color: white;
 }
 
@@ -421,7 +421,7 @@ body {
 
 /* Author box styling */
 .author-box {
-    background-color: #8d8d8d;
+    background-color: #595959;
     padding: 0.5rem 1rem;
     margin: 1rem 0;
     border-radius: 4px;
@@ -433,6 +433,11 @@ body {
     margin: 0;
     font-size: 0.9rem;
     text-transform: none;
+}
+
+/* Override Bootstrap text-muted color */
+.card-body .text-muted {
+    color: #9298A0 !important;
 }
 
 .btn-like:hover,
